@@ -1,0 +1,22 @@
+#timer {
+  text-align: center;
+  font-family: 'Righteous', cursive;
+ font-size: 20vw;
+}
+
+header{
+  text-align: center;
+}
+
+header h1{
+  font-family: 'Cabin', sans-serif;
+  font-size: 10vw;
+  margin-bottom: 10px;
+
+}
+header p {
+  font-family: 'Zilla Slab', serif;
+  font-size: 7vw;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

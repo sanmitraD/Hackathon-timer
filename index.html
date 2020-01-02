@@ -1,16 +1,19 @@
 <html>
     <head>
       <title>Hackathon timer</title>
+      <link href="https://fonts.googleapis.com/css?family=Cabin|Righteous|Zilla+Slab&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        Hackathon Timer
-        This is a 36 hr log hackathon
-
-        <div id="timer">
-
-        </div>
+        <header>
+          <h1 id="title">Hackathon Timer</h1>
+          <p>Hackathon starts in </p>
+        </header>
+        <main>
+          <div id="timer"></div>
+        </main>
         <script type="text/javascript">
-          const endTime = new Date("Jan 3, 2020 09:00:00").getTime();
+          const endTime = new Date("Jan 3, 2020 00:00:00").getTime();
           oneHour = 1000*60*60
           oneMinute = 1000*60
           oneSecond = 1000
@@ -18,9 +21,9 @@
           setInterval(function(){
             currentTime = new Date()
             let elapsedTime = parseInt(endTime - currentTime.getTime());
-            elapsedHours = Math.floor(elapsedTime/oneHour)
-            elapsedMinutes = Math.floor((elapsedTime%oneHour)/oneMinute)
-            elapsedSeconds = Math.floor((elapsedTime%oneMinute)/oneSecond)
+            elapsedHours = Math.floor(elapsedTime/oneHour).toString().padStart(2,'0')
+            elapsedMinutes = Math.floor((elapsedTime%oneHour)/oneMinute).toString().padStart(2,'0')
+            elapsedSeconds = Math.floor((elapsedTime%oneMinute)/oneSecond).toString().padStart(2,'0')
 
             let timerString = `${elapsedHours}:${elapsedMinutes}:${elapsedSeconds}`
             timerDiv.innerHTML = timerString
