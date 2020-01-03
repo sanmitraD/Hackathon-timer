@@ -1,5 +1,6 @@
 body {
   top:10%;
+
 }
 
 #timer {
@@ -25,4 +26,8 @@ header p {
   margin-top: 10px;
   margin-bottom: 10px;
   transition: 0.3s;
+}
+#college {
+  font-weight: bold;
+  font-size: 5vw;
 }
